@@ -6,7 +6,7 @@ export default function FashionStylist() {
   const [wardrobe, setWardrobe] = useState({
     tops: [],
     bottoms: [],
-    accessories: []
+    footwear: []
   });
   const [suggestion, setSuggestion] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -28,7 +28,7 @@ export default function FashionStylist() {
     setLoading(true);
     const top = wardrobe.tops[Math.floor(Math.random() * wardrobe.tops.length)];
     const bottom = wardrobe.bottoms[Math.floor(Math.random() * wardrobe.bottoms.length)];
-    const accessory = wardrobe.accessories[Math.floor(Math.random() * wardrobe.accessories.length)];
+    const accessory = wardrobe.footwear[Math.floor(Math.random() * wardrobe.footwear.length)];
     
     const suggestion = `Try wearing ${top?.name || 'a top'} with ${bottom?.name || 'a bottom'}, and accessorize with ${accessory?.name || 'an accessory'}.`;
     setSuggestion(suggestion);
@@ -37,9 +37,9 @@ export default function FashionStylist() {
 
   return (
     <div className="container mx-auto">
-      <h1 className="text-3xl font-bold text-center text-blue-600 mb-8">Fashion Stylist</h1>
+      <h1 className="text-3xl font-bold text-center text-blue-600 mb-8">Best-Dressed</h1>
       <div className="wardrobe-container">
-        {['tops', 'bottoms', 'accessories'].map((category) => (
+        {['tops', 'bottoms', 'footwear'].map((category) => (
           <div key={category} className="wardrobe-section">
             <h2 className="text-xl font-semibold mb-4 capitalize">{category}</h2>
             <div className="image-grid">
