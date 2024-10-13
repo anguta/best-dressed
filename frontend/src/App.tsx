@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Upload, Camera } from 'lucide-react';
+import { Upload} from 'lucide-react';
 import './App.css';
 
 interface WardrobeItem {
