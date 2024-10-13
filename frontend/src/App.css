@@ -39,3 +39,23 @@
 .icon {
   @apply w-4 h-4 mr-2;
 }
+
+.outfit-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.outfit-item {
+  text-align: center;
+}
+
+.outfit-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
